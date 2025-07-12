@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-poppins: "Poppins", sans-serif;
+    --font-mont: "Montserrat", sans-serif;
+    --font-libre: "Libre Franklin", sans-serif;
+}
+
+body {
+    @apply font-poppins
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #2B2F3A, #0D0E12);
+    overflow: hidden;
+}
+
+
+.title {
+    position: absolute;
+    top: 10%;
+    right: 60%;
+    text-align: right;
+    color: #fff;
+    font-size: 150px;
+    width: 40%;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 3px 5px 0px #478860;
+    line-height: .9em;
+    transform: rotate(-5deg);
+}
+
+.images {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    --rotate: 0deg;
+    transform: translate(-50%, 80%) rotate(var(--rotate));
+    width: 100vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+    outline: 3px dashed #fff5;
+    outline-offset: -100px;
+    background: rgba(255, 255, 255, 0.561);
+    backdrop-filter: blur(4px);
+}
+
+.images .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    rotate: calc(80deg * var(--i));
+}
+
+.images .item img {
+    height: 420px;
+    transform: rotate(-50deg);
+}
+
+.content {
+    color: #fff;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    text-align: justify;
+    width: 350px;
+}
+
+.content h1 {
+    color: #E88735;
+    font-size: xxx-large;
+}
+
+.content button {
+    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: #E88735;
+    color: #fff;
+    border: none;
+    float: right;
+}
+
+.content .item {
+    display: none;
+}
+
+.content .item.active {
+    display: block;
+}
+
+@keyframes showContent {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.content .item.active h1 {
+    opacity: 0;
+    animation: showContent 0.5s ease-in-out 1 forwards;
+}
+
+.content .item.active .des {
+    opacity: 0;
+    animation: showContent 0.5s 0.3s ease-in-out 1 forwards;
+}
+
+.content .item.active button {
+    opacity: 0;
+    animation: showContent 0.5s 0.6s ease-in-out 1 forwards;
+}
+
+
+#prev,
+#next {
+    position: absolute;
+    border: none;
+    top: 50%;
+    left: 250px;
+    font-size: 100px;
+    font-family: cursive;
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0.3
+}
+
+#next {
+    left: unset;
+    right: 250px;
+}
+
+#next:hover,
+#prev:hover {
+    opacity: 1
+}
+
+header nav ul li a:hover {
+    @apply font-bold transition-all text-[#ce7520] border-b border-[#ce7520]
+}
+
+@media(max-width: 768px) {
+    .main-menu nav {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        background-color: #efefef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .main-menu nav ul {
+        flex-direction: column;
+    }
+
+    .main-menu nav ul a {
+        font-size: 30px;
+    }
+
+    .main-menu nav.active {
+        left: 0;
+    }
+}
+
+.about {
+    background: url("../images/midd\ text\ banner2.png") no-repeat right/contain;
+}
+
+.hero-container .slide {
+    @apply relative;
+}
+
+.hero-container .slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 145, 46, 0.63);
+    z-index: 1;
+}
+
+.hero-container .active::before {
+    opacity: 0;
+}
+
+.hero-container .slide.active {
+    @apply sm:w-[70%] w-[100%] transition-all duration-500 ease-in-out;
+}
+
+.hero-container .slide {
+    @apply sm:w-[10%] w-[0%] transition-all duration-500 ease-in-out;
+}
+
+.all-products::before {
+    content: "";
+    height: 150px;
+    width: 100%;
+    background-color: #ffc20e;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.benifits {
+    background: url('../images/midd\ text\ banner.png') no-repeat bottom/cover;
+}
+
+.products {
+    background: url("../images/midd\ text\ banner\ 2.png") no-repeat center/cover;
+}
+
+.receipie-card img:hover {
+    scale: 1.2;
+}
+
+.receipie-card .img-box {
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.receipie-card .img-box img {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.what_our_client_says {
+    background: url("../images/midd\ text\ banner\ 4.png") no-repeat bottom/contain;
+}
+
+.testimonials_card::after {
+    content: "";
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    background-color: #fffcd5;
+    width: 60px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    bottom: -40px;
+    left: 50px;
+    filter: drop-shadow(5px 0 10px rgba(0, 0, 0, 0.692))
+}
+
+.testimonials_card {
+    margin-bottom: 20px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.309);
+    transition: all 0.5s ease-in-out;
+}
+
+.testimonials_card:hover {
+    scale: 1.1;
+}
+
+.testi_quote h3::after {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: #ce7520;
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* FOOTER */
+
+.footer_top ul li a {
+    @apply transition-all
+}
+
+.footer_top ul li a:hover,
+.copyright ul li a:hover {
+    @apply scale-110 inline-block text-black
+}
