@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPS</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="sticky top-0 bg-white z-20">
+        <div class="container mx-auto p-2 pb-1 flex justify-between items-center">
+            <div class="left-head">
+                <a href="index.html"><img src="./images/full bdy.png" alt="logo" width="250"
+                        class="md:w-[250px] w-[150px]"></a>
+            </div>
+            <div class="right-head">
+                <div class="social-icons pe-2 text-xl flex gap-3 mb-3 justify-end items-center text-[#ce7520]">
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                </div>
+                <div class="main-menu flex gap-5 items-end">
+                    <nav>
+                        <i
+                            class="nav-close ri-arrow-left-line text-3xl text-black absolute right-5 top-5 cursor-pointer md:hidden"></i>
+                        <ul class="uppercase flex gap-5">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search bg-amber-50  hidden shadow rounded p-1 md:flex items-center px-5">
+                        <input type="text" name="" id="" class="outline-0 border-0" placeholder="Search..">
+                        <i class="ri-search-2-line text-[#ce7520]"></i>
+                    </div>
+                    <a href="#"
+                        class="bg-[#ce7520] font-mont md:mb-0 mb-2 text-white px-5 py-1 rounded-2xl inline-block hover:scale-105 md:text-sm text-xs">JOIN
+                        US</a>
+                    <button type="button" class="md:hidden cursor-pointer md:mb-0 nav-btn mb-1"><i
+                            class="ri-menu-3-line text-[#ce7520] text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <hr class="text-[#ce7520] w-[80%] mx-auto">
+    </header>
+
+    <main>
+        <section class="gallery p-5">
+            <div class="gallery-wrapper pt-[100px]">
+                <img src="./images/gallery/footer logo.png" alt="logo" width="720" class="w-[900px] mx-auto">
+                <p class="md:w-[70%] w-full mx-auto text-lg text-white font-extralight">Every spoonful of our
+                    Atta, Maida, Sooji and Bran Flakes carries
+                    the legacy of our land and the
+                    promise
+                    of your family’s health. We invite you to experience the KPS difference – where tradition meets
+                    trust in
+                    every grain.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#ce7520] px-5 py-10">
+        <div
+            class="container mx-auto grid md:grid-cols-3 grid-cols-1 footer_top py-5 md:justify-items-center md:items-center">
+            <div class="footer_logo mb-5">
+                <img src="./images/footer logo.png" alt="footer-logo" width="100%">
+            </div>
+            <div class="text-white mb-5">
+                <p class="font-bold mb-3 text-lg">Quick Links</p>
+                <ul>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">GALARY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="text-white">
+                <p class="font-bold mb-3 text-lg">Get In Touch</p>
+                <ul>
+                    <li><span class="font-bold">Customer Care :</span><br><span>+91 8250273384</span></li>
+                    <li><span class="font-bold">Email :</span><br><span>kpsretailmart@gmail.com</span></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="w-[80%] h-1 bg-[#0000002b] rounded-[50%] mx-auto my-3"></div>
+        <div class="copyright md:w-[80%] w-full mx-auto text-white text-sm flex md:flex-row flex-col justify-between">
+            <p class="font-light p-2">Web Development & Designed by <span class="font-bold">fairbrain</span> (all rights
+                reserved)</p>
+            <ul class="flex items-center gap-4 p-2">
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">License</a></li>
+            </ul>
+            <div class="gallery-slider">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./src/main.js"></script>
+</body>
+
+</html>

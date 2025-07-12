@@ -293,3 +293,14 @@ header nav ul li a:hover {
 .copyright ul li a:hover {
     @apply scale-110 inline-block text-black
 }
+
+
+/* GALLERY SECTION */
+
+.gallery-wrapper {
+    background: linear-gradient(rgba(104, 103, 103, 0.654), rgba(0, 0, 0, 0.608)), url("../images/gallery/WhatsApp\ Image\ 2025-04-26\ at\ 11.03.44_d5d75f04.jpg") no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+}

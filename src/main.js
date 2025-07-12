@@ -1,3 +1,29 @@
+
+// SWIPER SLIDER
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
+
+
 const slides = document.querySelectorAll(".hero-container .slide");
 const nextBtn = document.querySelector(".next-slide");
 const prevBtn = document.querySelector(".prev-slide");
@@ -45,39 +71,41 @@ navClose?.addEventListener("click", () => {
 
 // HERO SLIDER
 
-let prev = document.getElementById('prev');
-let next = document.getElementById('next');
-let image = document.querySelector('.images');
-let items = document.querySelectorAll('.images .item');
-let contents = document.querySelectorAll('.content .item');
+const prev1 = document.getElementById('prev');
+const next1 = document.getElementById('next');
+const image = document.querySelector('.images');
+const items = document.querySelectorAll('.images .item');
+const contents = document.querySelectorAll('.content .item');
 
 let rotate = 0;
 let active = 0;
-let countItem = items.length;
-let rotateAdd = 360 / countItem;
+const countItem = items.length;
+const rotateAdd = 360 / countItem;
 
 function nextSlider() {
-    active = active + 1 > countItem - 1 ? 0 : active + 1;
-    rotate = rotate + rotateAdd;
+    active = (active + 1) % countItem;
+    rotate += rotateAdd;
     show();
 }
-function prevSlider() {
-    active = active - 1 < 0 ? countItem - 1 : active - 1;
-    rotate = rotate - rotateAdd;
-    show();
 
+function prevSlider() {
+    active = (active - 1 + countItem) % countItem;
+    rotate -= rotateAdd;
+    show();
 }
+
 function show() {
-    image.style.setProperty("--rotate", rotate + 'deg');
-    image.style.setProperty("--rotate", rotate + 'deg');
-    contents.forEach((content, key) => {
-        if (key == active) {
-            content.classList.add('active');
-        } else {
-            content.classList.remove('active');
-        }
-    })
+    if (!image) return;
+    image.style.setProperty("--rotate", `${rotate}deg`);
+
+    contents.forEach((content, index) => {
+        content.classList.toggle('active', index === active);
+    });
 }
-next.onclick = nextSlider;
-prev.onclick = prevSlider;
+
+// Button click events
+next1?.addEventListener("click", nextSlider);
+prev1?.addEventListener("click", prevSlider);
+
+// Auto slide every 3 seconds
 const autoNext = setInterval(nextSlider, 3000);
