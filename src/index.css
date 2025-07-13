@@ -298,9 +298,32 @@ header nav ul li a:hover {
 /* GALLERY SECTION */
 
 .gallery-wrapper {
-    background: linear-gradient(rgba(104, 103, 103, 0.654), rgba(0, 0, 0, 0.608)), url("../images/gallery/WhatsApp\ Image\ 2025-04-26\ at\ 11.03.44_d5d75f04.jpg") no-repeat center/cover;
+    background: linear-gradient(rgba(104, 103, 103, 0.654), rgba(0, 0, 0, 0.608)), url("../images/gallery/card15.jpg") no-repeat center/cover;
     height: 100vh;
     width: 100%;
     border-radius: 25px;
     text-align: center;
+}
+
+.gallery-slider .swiper {
+    width: 480px;
+    height: 520px;
+}
+
+@media(max-width:768px) {
+    .gallery-slider .swiper {
+        width: 200px;
+        height: 280px;
+    }
+}
+
+.gallery-slider .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
 }

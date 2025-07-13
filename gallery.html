@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KPS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -52,16 +53,116 @@
     </header>
 
     <main>
-        <section class="gallery p-5">
-            <div class="gallery-wrapper pt-[100px]">
+        <section class="gallery p-5 ">
+            <div class="gallery-wrapper pt-[100px] relative z-9 px-10">
                 <img src="./images/gallery/footer logo.png" alt="logo" width="720" class="w-[900px] mx-auto">
-                <p class="md:w-[70%] w-full mx-auto text-lg text-white font-extralight">Every spoonful of our
+                <p class="md:w-[70%] w-full mx-auto md:text-lg text-white font-extralight text-sm">Every spoonful of our
                     Atta, Maida, Sooji and Bran Flakes carries
                     the legacy of our land and the
                     promise
                     of your family’s health. We invite you to experience the KPS difference – where tradition meets
                     trust in
                     every grain.</p>
+                <div class="gallery-slider mt-10 overflow-hidden">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/gallery/card1.jpg" alt="gallery" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/gallery/card4.jpg" alt="gallery" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/gallery/card5.jpg" alt="gallery" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/gallery/card6.jpg" alt="gallery" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/gallery/card7.jpg" alt="gallery" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/gallery/card8.jpg" alt="gallery" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="another-gallery rounded-2xl p-5 gap-5 bg-[#fde9dc] -mt-5 grid md:grid-cols-3 grid-cols-1 md:pt-[300px] pt-20">
+                <div class="gal-card">
+                    <a href="./images/gallery/card5.jpg" data-fancybox="gallery">
+                        <img src="./images/gallery/card5.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow">
+                    </a>
+                </div>
+                <div class="gal-card">
+                    <a href="./images/gallery/card9.jpg" data-fancybox="gallery">
+                        <img src="./images/gallery/card9.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow">
+                    </a>
+                </div>
+                <div class="gal-card">
+                    <a href="./images/gallery/lorry.jpg" data-fancybox="gallery">
+                        <img src="./images/gallery/lorry.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow">
+                    </a>
+                </div>
+            </div>
+            <div class="gallery-extra bg-[#dbf1fa] p-5 my-5 rounded-2xl">
+                <img src="./images/gallery/card11.jpg" alt="gallery"
+                    class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+
+                <div class="grid md:grid-cols-6 gap-3 mt-10 grid-cols-1">
+                    <a href="./images/gallery/card12.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card12.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card13.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card13.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card14.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card14.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card15.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card15.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card16.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card16.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card17.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card17.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card18.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card18.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card19.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card19.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card20.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card20.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card2.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card2.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card3.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card3.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                    <a href="./images/gallery/card7.jpg" class="" data-fancybox="gallery">
+                        <img src="./images/gallery/card7.jpg" alt="gallery"
+                            class="w-full h-[250px] object-cover rounded-2xl shadow border border-white">
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -85,7 +186,6 @@
                 <ul>
                     <li><span class="font-bold">Customer Care :</span><br><span>+91 8250273384</span></li>
                     <li><span class="font-bold">Email :</span><br><span>kpsretailmart@gmail.com</span></li>
-
                 </ul>
             </div>
         </div>
@@ -98,31 +198,11 @@
                 <li><a href="#">Privacy</a></li>
                 <li><a href="#">License</a></li>
             </ul>
-            <div class="gallery-slider">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        ...
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
 
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
-                </div>
-            </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/main.js"></script>
 </body>

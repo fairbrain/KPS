@@ -1,27 +1,4 @@
 
-// SWIPER SLIDER
-
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
 
 
 const slides = document.querySelectorAll(".hero-container .slide");
@@ -71,41 +48,21 @@ navClose?.addEventListener("click", () => {
 
 // HERO SLIDER
 
-const prev1 = document.getElementById('prev');
-const next1 = document.getElementById('next');
-const image = document.querySelector('.images');
-const items = document.querySelectorAll('.images .item');
-const contents = document.querySelectorAll('.content .item');
+// GALLERY SWIPER
+var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+    loop: true,
+    autoplay: {
+        delay: 3000, // 3 seconds delay
+        disableOnInteraction: false, // autoplay won't stop after user interaction
+    },
+});
+// GALLERY SWIPER
 
-let rotate = 0;
-let active = 0;
-const countItem = items.length;
-const rotateAdd = 360 / countItem;
+// FANCYBOX
 
-function nextSlider() {
-    active = (active + 1) % countItem;
-    rotate += rotateAdd;
-    show();
-}
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+});
 
-function prevSlider() {
-    active = (active - 1 + countItem) % countItem;
-    rotate -= rotateAdd;
-    show();
-}
-
-function show() {
-    if (!image) return;
-    image.style.setProperty("--rotate", `${rotate}deg`);
-
-    contents.forEach((content, index) => {
-        content.classList.toggle('active', index === active);
-    });
-}
-
-// Button click events
-next1?.addEventListener("click", nextSlider);
-prev1?.addEventListener("click", prevSlider);
-
-// Auto slide every 3 seconds
-const autoNext = setInterval(nextSlider, 3000);
