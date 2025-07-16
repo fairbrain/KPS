@@ -149,7 +149,7 @@ body {
     opacity: 1
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover,header nav ul li a.active {
     @apply font-bold transition-all text-[#ce7520] border-b border-[#ce7520]
 }
 
