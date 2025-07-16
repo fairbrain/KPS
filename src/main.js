@@ -49,7 +49,7 @@ navClose?.addEventListener("click", () => {
 // HERO SLIDER
 
 // GALLERY SWIPER
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".gallery-slider .mySwiper", {
     effect: "cards",
     grabCursor: true,
     loop: true,
@@ -59,6 +59,29 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 // GALLERY SWIPER
+
+// PRODUCT  SWIPER
+
+var swiper = new Swiper(".product-carousel .mySwiper", {
+    spaceBetween: 30,
+    effect: "fade",
+    autoplay: {
+        delay: 3000, // 3 seconds delay
+        disableOnInteraction: false, // autoplay won't stop after user interaction
+    },
+    dots: false,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
+});
+
+// PRODUCT  SWIPER
 
 // FANCYBOX
 

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+    <header class="sticky top-0 bg-white z-20">
+        <div class="container mx-auto p-2 pb-1 flex justify-between items-center">
+            <div class="left-head">
+                <a href="index.html"><img src="./images/full bdy.png" alt="logo" width="250"
+                        class="md:w-[250px] w-[150px]"></a>
+            </div>
+            <div class="right-head">
+                <div class="social-icons pe-2 text-xl flex gap-3 mb-3 justify-end items-center text-[#ce7520]">
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                </div>
+                <div class="main-menu flex gap-5 items-end">
+                    <nav>
+                        <i
+                            class="nav-close ri-arrow-left-line text-3xl text-black absolute right-5 top-5 cursor-pointer md:hidden"></i>
+                        <ul class="uppercase flex gap-5">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search bg-amber-50  hidden shadow rounded p-1 md:flex items-center px-5">
+                        <input type="text" name="" id="" class="outline-0 border-0" placeholder="Search..">
+                        <i class="ri-search-2-line text-[#ce7520]"></i>
+                    </div>
+                    <a href="#"
+                        class="bg-[#ce7520] font-mont md:mb-0 mb-2 text-white px-5 py-1 rounded-2xl inline-block hover:scale-105 md:text-sm text-xs">JOIN
+                        US</a>
+                    <button type="button" class="md:hidden cursor-pointer md:mb-0 nav-btn mb-1"><i
+                            class="ri-menu-3-line text-[#ce7520] text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <hr class="text-[#ce7520] w-[80%] mx-auto">
+    </header>
+    <main>
+        <section class="product-carousel relative">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="content-product grid lg:grid-cols-3 grid-cols-1">
+                            <div class="left-prod-img relative overflow-visible">
+                                <img src="./images/product/Snack Bag Mockup_2.png" alt="product"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute bottom-0 -right-10 w-[150px] -rotate-45 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+                            <div class="product-details bg-white flex justify-center items-center p-5">
+                                <div>
+                                    <h2 class="text-[#ff8000] text-4xl font-bold">KITCHEN KING</h2>
+                                    <p class="text-xl font-light">Whole Wheat Chakki Atta</p>
+                                    <p class="text-[10px] mt-4 px-5 text-[#3b3831]">
+                                        Made from the finest quality wheat sourced directly from trusted farmers, Chakki
+                                        Fresh Atta
+                                        is stone-ground using traditional chakki methods to retain all the natural
+                                        fiber, nutrients, and
+                                        rich aroma. The result is soft, fluffy rotis with unmatched taste and
+                                        texture—just like
+                                        homemade.
+                                        <br><br>
+                                        Free from additives and preservatives, our atta is processed under stringent
+                                        hygiene
+                                        standards, ensuring purity and freshness in every pack. Ideal for daily use,
+                                        it’s the wholesome
+                                        choice for a healthy family
+                                    </p>
+                                    <p class="text-sm mt-5"><strong>Key Features:</strong></p>
+                                    <ul
+                                        class="text-[#3b3831] list-disc list-inside text-[10px] w-[90%] mx-auto px-5 text-center font-light flex flex-col gap-2">
+                                        <li>Made from premium-quality whole wheat grains</li>
+                                        <li>Traditional chakki grinding for authentic taste</li>
+                                        <li>Rich in fiber and natural nutrients</li>
+                                        <li>100% pure, no added maida or preservatives</li>
+                                        <li>Hygienically processed and packed</li>
+                                        <li>Bring home the goodness of tradition with Kitchen King Chakki Atta – where
+                                            purity meets nutrition.</li>
+                                    </ul>
+                                    <div
+                                        class="weight-product grid grid-cols-2 mt-5 border-t-2 border-t-[#ff8000] mx-5">
+                                        <div class="border-r-2 border-r-[#ff8000]">
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">5kg</span>
+                                        </div>
+                                        <div class="">
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">1kg</span>
+                                        </div>
+                                    </div>
+                                    <p class="font-fancy text-3xl text-[#3b3831] mt-5">Pure Goodness in Every Grain</p>
+                                </div>
+                            </div>
+                            <div class="right-prod-img relative">
+                                <img src="./images/product/Snack Bag Mockup_8.png" alt="product"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-product grid lg:grid-cols-3 grid-cols-1">
+                            <div class="left-prod-img relative overflow-visible">
+                                <img src="./images/product/Snack Bag Mockup_1.png" alt="product"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute bottom-0 -right-10 w-[150px] -rotate-45 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+                            <div class="product-details bg-[#f0ffe2] flex justify-center items-center p-5">
+                                <div>
+                                    <h2 class="text-[#156966] text-4xl font-bold">KITCHEN KING</h2>
+                                    <p class="text-xl font-light">Premium Maida</p>
+                                    <p class="text-[10px] mt-4 px-5 text-[#3b3831]">
+                                        rafted from the finest quality wheat and finely milled to perfection, KPS Maida
+                                        offers
+                                        exceptional softness, texture, and consistency for all your baking and cooking
+                                        needs.
+                                        Whether you're preparing fluffy bhaturas, crispy samosas, soft naans, or
+                                        delicious baked
+                                        treats, our maida delivers flawless results every time.
+                                        <br><br>
+                                        Processed under strict hygienic conditions, it is free from impurities and
+                                        ensures superior
+                                        quality and freshness in every pack.
+                                    </p>
+                                    <p class="text-sm text-center font-semibold mb-2">Key Features:</p>
+                                    <ul
+                                        class="text-[#3b3831] list-disc list-inside text-[10px] w-[90%] mx-auto px-5 text-center font-light flex flex-col gap-2">
+                                        <li>Refined for Perfect Results</li>
+                                        <li>Ultra-fine texture for smooth, lump-free dough</li>
+                                        <li>Ideal for bakery items, Indian snacks, and fast food preparations</li>
+                                        <li>100% pure and hygienically processed</li>
+                                        <li>Uniform consistency for reliable cooking outcomes</li>
+                                        <li>Maida – the chef’s choice for superior taste and texture.</li>
+                                    </ul>
+
+                                    <div
+                                        class="weight-product grid grid-cols-2 mt-5 border-t-2 border-t-[#156966] mx-5">
+                                        <div class="border-r-2 border-r-[#156966]">
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">1kg</span>
+                                        </div>
+                                        <div class="">
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">500g</span>
+                                        </div>
+                                    </div>
+                                    <p class="font-fancy text-3xl text-[#3b3831] mt-5">Refined for Perfect Results</p>
+                                </div>
+                            </div>
+                            <div class="right-prod-img relative">
+                                <img src="./images/product/Snack Bag Mockup_7.png" alt="product"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-product grid lg:grid-cols-3 grid-cols-1">
+                            <!-- Left Image -->
+                            <div class="left-prod-img relative overflow-visible">
+                                <img src="./images/product/Snack Bag Mockup_3.png" alt="product"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute bottom-0 -right-10 w-[150px] -rotate-45 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+
+                            <!-- Center Product Description -->
+                            <div class="product-details bg-[#00809d] text-white flex justify-center items-center p-5">
+                                <div>
+                                    <h2 class="text-4xl font-bold">KITCHEN KING</h2>
+                                    <p class="text-xl font-light">Premium Sooji</p>
+                                    <p class="text-[10px] mt-4 px-5 ">
+                                        Made from carefully selected, high-quality wheat, KPS Premium Sooji (semolina)
+                                        is granulated to the
+                                        ideal consistency for superior taste and texture. Whether you're making upma,
+                                        halwa, dhokla, or crispy
+                                        snacks, our sooji ensures a light, fluffy, and flavorful result every time.
+                                        <br><br>
+                                        Processed under stringent hygiene standards, it retains the natural goodness of
+                                        wheat and is free
+                                        from additives or preservatives—making it a healthy and versatile choice for
+                                        every kitchen.
+                                    </p>
+                                    <p class="text-sm mt-5"><strong>Key Features:</strong></p>
+                                    <ul
+                                        class="list-disc list-inside text-[10px] w-[90%] mx-auto px-5 text-center font-light flex flex-col gap-2">
+                                        <li>Made from premium-grade wheat grains</li>
+                                        <li>Evenly milled for consistent grain size</li>
+                                        <li>Rich in natural nutrients and energy</li>
+                                        <li>100% pure and hygienically packed</li>
+                                        <li>Ideal for both sweet and savory dishes</li>
+                                        <li>Premium Sooji – your everyday essential for traditional taste and healthy
+                                            meals.</li>
+                                    </ul>
+                                    <div class="weight-product grid grid-cols-2 mt-5 border-t-2 border-t-white mx-5">
+                                        <div class="border-r-2 border-r-white">
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">500g</span>
+                                        </div>
+                                        <div class="">
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">200g</span>
+                                        </div>
+                                    </div>
+                                    <p class="font-fancy text-3xl  mt-5">Wholesome Goodness, Perfect
+                                        Texture</p>
+                                </div>
+                            </div>
+
+                            <!-- Right Image -->
+                            <div class="right-prod-img relative">
+                                <img src="./images/product/Snack Bag Mockup_5.png" alt="product"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="product" width="50"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="content-product grid lg:grid-cols-3 grid-cols-1">
+                            <!-- Left Image -->
+                            <div class="left-prod-img relative overflow-visible">
+                                <img src="./images/product/Snack Bag Mockup_4.png" alt="Sooji"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute bottom-0 -right-10 w-[150px] -rotate-45 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+
+                            <!-- Center Content -->
+                            <div
+                                class="product-details bg-[#f6f6f6] text-[#935003] flex justify-center items-center p-5">
+                                <div>
+                                    <h2 class="text-4xl font-bold">KITCHEN KING</h2>
+                                    <p class="text-xl font-light">Sooji</p>
+                                    <p class="text-[10px] mt-4 px-5 ">
+                                        Made from high-quality wheat, carefully milled to achieve a fine, uniform
+                                        texture. Known for
+                                        its versatility, it is ideal for preparing a variety of traditional Indian
+                                        dishes like upma, halwa, idli,
+                                        and crispy snacks.
+                                        <br><br>
+                                        Naturally rich in energy and easy to digest, our sooji is processed in hygienic
+                                        conditions to
+                                        ensure purity, freshness, and long-lasting quality.
+                                    </p>
+                                    <p class="text-sm mt-5"><strong>Key Features:</strong></p>
+                                    <ul
+                                        class="list-disc list-inside text-[10px] w-[90%] mx-auto px-5 text-center font-light flex flex-col gap-2">
+                                        <li>Made from select wheat grains</li>
+                                        <li>Fine, consistent granules for smooth texture</li>
+                                        <li>Ideal for both sweet and savory recipes</li>
+                                        <li>100% pure and hygienically packed</li>
+                                        <li>No added preservatives or chemicals</li>
+                                        <li>Sooji – the perfect ingredient for delicious, everyday cooking.</li>
+                                    </ul>
+                                    <div
+                                        class="weight-product grid grid-cols-2 mt-5 border-t-2 border-t-[#935003] mx-5">
+                                        <div class="border-r-2 border-r-[#935003]">
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">500g</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">150g</span>
+                                        </div>
+                                    </div>
+                                    <p class="font-fancy text-3xl mt-5">Wholesome Goodness, Perfect
+                                        Texture</p>
+                                </div>
+                            </div>
+
+                            <!-- Right Image -->
+                            <div class="right-prod-img relative">
+                                <img src="./images/product/Snack Bag Mockup_6.png" alt="Sooji"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+                        <div class="content-product grid lg:grid-cols-3 grid-cols-1">
+                            <!-- Left Image -->
+                            <div class="left-prod-img relative overflow-visible">
+                                <img src="./images/product/Rice Pouch Mockup mini k.png" alt="Miniket Rice"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute bottom-0 -right-10 w-[150px] -rotate-45 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+
+                            <!-- Center Content -->
+                            <div
+                                class="product-details bg-[#eed0d0] text-[#8e540c] flex justify-center items-center p-5">
+                                <div>
+                                    <h2 class="text-4xl font-bold">KITCHEN KING</h2>
+                                    <p class="text-xl font-light">Miniket Rice</p>
+                                    <p class="text-[10px] mt-4 px-5">
+                                        Miniket Rice is a premium-quality, finely milled rice known for its sleek,
+                                        slender grains, soft
+                                        texture, and delicate aroma. Ideal for daily meals, it cooks quickly and evenly,
+                                        delivering a
+                                        light, fluffy consistency that pairs perfectly with both vegetarian and
+                                        non-vegetarian dishes.
+                                        <br><br>
+                                        Sourced from trusted farms and processed under strict hygiene standards, our
+                                        Miniket Rice
+                                        is free from impurities and ensures consistent quality in every pack.
+                                    </p>
+                                    <p class="text-sm mt-5"><strong>Key Features:</strong></p>
+                                    <ul
+                                        class="list-disc list-inside text-[10px] w-[90%] mx-auto px-5 text-center font-light flex flex-col gap-2">
+                                        <li>Slender, polished grains with silky texture</li>
+                                        <li>Soft, non-sticky, and easy to digest</li>
+                                        <li>Ideal for everyday cooking – from steamed rice to khichdi</li>
+                                        <li>Naturally processed and hygienically packed</li>
+                                        <li>Uniform quality and long shelf life</li>
+                                        <li>Miniket Rice – The perfect choice for your daily dining needs.</li>
+                                    </ul>
+                                    <div
+                                        class="weight-product grid grid-cols-2 mt-5 border-t-2 border-t-[#8e540c] mx-5">
+                                        <div class="border-r-2 border-r-[#8e540c]">
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">5kg</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">1kg</span>
+                                        </div>
+                                    </div>
+                                    <p class="font-fancy text-3xl mt-5">Soft, Silky & Everyday Perfect
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Right Image -->
+                            <div class="right-prod-img relative">
+                                <img src="./images/product/Rice Pouch Mockup mini k.png" alt="Miniket Rice"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="content-product grid lg:grid-cols-3 grid-cols-1">
+                            <!-- Left Image -->
+                            <div class="left-prod-img relative overflow-visible">
+                                <img src="./images/product/Rice Pouch Mockup besmoti.png" alt="Basmati Rice"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute bottom-0 -right-10 w-[150px] -rotate-45 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+
+                            <!-- Center Content -->
+                            <div
+                                class="product-details bg-[#edf1d6] text-[#3a592f] flex justify-center items-center p-5">
+                                <div>
+                                    <h2 class="text-4xl font-bold">KITCHEN KING</h2>
+                                    <p class="text-xl font-light">Basmati Rice</p>
+                                    <p class="text-[10px] mt-4 px-5 text-[#3b3831]">
+                                        Experience the authentic taste of tradition with KPS Basmati Rice, known for its
+                                        long, slender
+                                        grains, rich aroma, and unmatched flavor. Grown in the fertile plains and
+                                        carefully aged to
+                                        enhance its natural qualities, our basmati rice delivers perfect texture and
+                                        fluffiness with
+                                        every meal.
+                                        <br><br>
+                                        Whether you're preparing biryani, pulao, or a simple bowl of steamed rice, KPS
+                                        Basmati
+                                        elevates your culinary creations with its superior quality and signature
+                                        fragrance.
+                                    </p>
+                                    <p class="text-sm mt-5"><strong>Key Features:</strong></p>
+                                    <ul
+                                        class="list-disc list-inside text-[10px] w-[90%] mx-auto px-5 text-center font-light flex flex-col gap-2">
+                                        <li>Extra-long, naturally aged basmati grains</li>
+                                        <li>Rich aroma and delicate flavor</li>
+                                        <li>Fluffy texture with non-sticky finish</li>
+                                        <li>Ideal for biryani, pulao, and festive dishes</li>
+                                        <li>Hygienically processed and packed for freshness</li>
+                                        <li>Basmati Rice – Where tradition meets premium quality, plate after plate.
+                                        </li>
+                                    </ul>
+                                    <div
+                                        class="weight-product grid grid-cols-2 mt-5 border-t-2 border-t-[#3a592f] mx-5">
+                                        <div class="border-r-2 border-r-[#3a592f]">
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">5kg</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-bold text-sm block font-mont">Net Wt</span>
+                                            <span class="font-bold text-2xl font-mont">1kg</span>
+                                        </div>
+                                    </div>
+                                    <p class="font-fancy text-3xl  mt-5">Fragrant, Fluffy & Flavorful</p>
+                                </div>
+                            </div>
+
+                            <!-- Right Image -->
+                            <div class="right-prod-img relative">
+                                <img src="./images/product/Rice Pouch Mockup besmoti.png" alt="Basmati Rice"
+                                    class="block lg:w-auto w-[50%] mx-auto">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute top-10 right-0 w-[150px] rotate-270 animate__animated animate__pulse animate__infinite">
+                                <img src="./images/product/wheat 1 png.png" alt="decoration"
+                                    class="absolute -bottom-20 -left-30 w-[250px] animate__animated animate__pulse animate__infinite">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <button type="button" class="swiper-button-prev"><i class="ri-arrow-left-s-line"></i></button>
+            <button type="button" class="swiper-button-next"><i class="ri-arrow-right-s-line"></i></button>
+
+        </section>
+    </main>
+    <footer class="bg-[#ce7520] px-5 py-10">
+        <div
+            class="container mx-auto grid md:grid-cols-3 grid-cols-1 footer_top py-5 md:justify-items-center md:items-center">
+            <div class="footer_logo mb-5">
+                <img src="./images/footer logo.png" alt="footer-logo" width="100%">
+            </div>
+            <div class="text-white mb-5">
+                <p class="font-bold mb-3 text-lg">Quick Links</p>
+                <ul>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">GALARY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="text-white">
+                <p class="font-bold mb-3 text-lg">Get In Touch</p>
+                <ul>
+                    <li><span class="font-bold">Customer Care :</span><br><span>+91 8250273384</span></li>
+                    <li><span class="font-bold">Email :</span><br><span>kpsretailmart@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-[80%] h-1 bg-[#0000002b] rounded-[50%] mx-auto my-3"></div>
+        <div class="copyright md:w-[80%] w-full mx-auto text-white text-sm flex md:flex-row flex-col justify-between">
+            <p class="font-light p-2">Web Development & Designed by <span class="font-bold">fairbrain</span> (all rights
+                reserved)</p>
+            <ul class="flex items-center gap-4 p-2">
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">License</a></li>
+            </ul>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./src/main.js"></script>
+</body>
+
+</html>

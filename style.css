@@ -1,5 +1,6 @@
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -45,6 +46,7 @@
     --font-poppins: "Poppins", sans-serif;
     --font-mont: "Montserrat", sans-serif;
     --font-libre: "Libre Franklin", sans-serif;
+    --font-fancy: "Corinthia", cursive;
   }
 }
 @layer base {
@@ -214,6 +216,15 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
+  .top-10 {
+    top: calc(var(--spacing) * 10);
+  }
+  .-right-10 {
+    right: calc(var(--spacing) * -10);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
@@ -223,11 +234,20 @@
   .-bottom-10 {
     bottom: calc(var(--spacing) * -10);
   }
+  .-bottom-20 {
+    bottom: calc(var(--spacing) * -20);
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .bottom-5 {
     bottom: calc(var(--spacing) * 5);
   }
   .-left-5 {
     left: calc(var(--spacing) * -5);
+  }
+  .-left-30 {
+    left: calc(var(--spacing) * -30);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -268,6 +288,9 @@
       max-width: 96rem;
     }
   }
+  .mx-5 {
+    margin-inline: calc(var(--spacing) * 5);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -285,6 +308,9 @@
   }
   .-mt-5 {
     margin-top: calc(var(--spacing) * -5);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
   }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
@@ -306,6 +332,9 @@
   }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
+  }
+  .block {
+    display: block;
   }
   .flex {
     display: flex;
@@ -352,8 +381,14 @@
   .w-\[80\%\] {
     width: 80%;
   }
+  .w-\[90\%\] {
+    width: 90%;
+  }
   .w-\[150px\] {
     width: 150px;
+  }
+  .w-\[250px\] {
+    width: 250px;
   }
   .w-\[900px\] {
     width: 900px;
@@ -366,11 +401,26 @@
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .-rotate-45 {
+    rotate: calc(45deg * -1);
+  }
+  .rotate-270 {
+    rotate: 270deg;
+  }
   .cursor-pointer {
     cursor: pointer;
   }
+  .list-inside {
+    list-style-position: inside;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -411,6 +461,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .overflow-visible {
+    overflow: visible;
+  }
   .overflow-x-hidden {
     overflow-x: hidden;
   }
@@ -437,6 +490,14 @@
     border-style: var(--tw-border-style);
     border-width: 0px;
   }
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
+  }
+  .border-r-2 {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 2px;
+  }
   .border-r-4 {
     border-right-style: var(--tw-border-style);
     border-right-width: 4px;
@@ -455,14 +516,65 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .border-t-\[\#3a592f\] {
+    border-top-color: #3a592f;
+  }
+  .border-t-\[\#8e540c\] {
+    border-top-color: #8e540c;
+  }
+  .border-t-\[\#156966\] {
+    border-top-color: #156966;
+  }
+  .border-t-\[\#935003\] {
+    border-top-color: #935003;
+  }
+  .border-t-\[\#ff8000\] {
+    border-top-color: #ff8000;
+  }
+  .border-t-white {
+    border-top-color: var(--color-white);
+  }
+  .border-r-\[\#3a592f\] {
+    border-right-color: #3a592f;
+  }
+  .border-r-\[\#8e540c\] {
+    border-right-color: #8e540c;
+  }
+  .border-r-\[\#156966\] {
+    border-right-color: #156966;
+  }
+  .border-r-\[\#935003\] {
+    border-right-color: #935003;
+  }
+  .border-r-\[\#ff8000\] {
+    border-right-color: #ff8000;
+  }
+  .border-r-white {
+    border-right-color: var(--color-white);
+  }
   .bg-\[\#0000002b\] {
     background-color: #0000002b;
+  }
+  .bg-\[\#00809d\] {
+    background-color: #00809d;
   }
   .bg-\[\#ce7520\] {
     background-color: #ce7520;
   }
   .bg-\[\#dbf1fa\] {
     background-color: #dbf1fa;
+  }
+  .bg-\[\#edf1d6\] {
+    background-color: #edf1d6;
+  }
+  .bg-\[\#eed0d0\] {
+    background-color: #eed0d0;
+  }
+  .bg-\[\#f0ffe2\] {
+    background-color: #f0ffe2;
+  }
+  .bg-\[\#f6f6f6\] {
+    background-color: #f6f6f6;
   }
   .bg-\[\#fde9dc\] {
     background-color: #fde9dc;
@@ -548,6 +660,9 @@
   .text-start {
     text-align: start;
   }
+  .font-fancy {
+    font-family: var(--font-fancy);
+  }
   .font-libre {
     font-family: var(--font-libre);
   }
@@ -561,6 +676,10 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-8xl {
     font-size: var(--text-8xl);
@@ -608,11 +727,29 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-\[\#3a592f\] {
+    color: #3a592f;
+  }
+  .text-\[\#3b3831\] {
+    color: #3b3831;
+  }
+  .text-\[\#8e540c\] {
+    color: #8e540c;
+  }
+  .text-\[\#156966\] {
+    color: #156966;
+  }
+  .text-\[\#935003\] {
+    color: #935003;
+  }
   .text-\[\#a2550d\] {
     color: #a2550d;
   }
   .text-\[\#ce7520\] {
     color: #ce7520;
+  }
+  .text-\[\#ff8000\] {
+    color: #ff8000;
   }
   .text-\[rgb\(206\,117\,32\)\] {
     color: rgb(206,117,32);
@@ -787,6 +924,16 @@
   .md\:text-\[16px\] {
     @media (width >= 48rem) {
       font-size: 16px;
+    }
+  }
+  .lg\:w-auto {
+    @media (width >= 64rem) {
+      width: auto;
+    }
+  }
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
   .lg\:grid-cols-5 {
@@ -1091,6 +1238,96 @@ header nav ul li a:hover {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
+}
+.product-carousel .swiper {
+  width: 100%;
+  height: 100%;
+}
+.product-carousel .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-carousel .swiper-slide:nth-child(1) {
+  position: relative;
+  background-color: #fcc783;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.product-carousel .swiper-slide:nth-child(2) {
+  position: relative;
+  background-color: #2d4f2c;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.product-carousel .swiper-slide:nth-child(3) {
+  position: relative;
+  background-color: #fcecdd;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.product-carousel .swiper-slide:nth-child(4) {
+  position: relative;
+  background-color: #ffd66c;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.product-carousel .swiper-slide:nth-child(5) {
+  position: relative;
+  background-color: #c5dce4;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.product-carousel .swiper-slide:nth-child(6) {
+  position: relative;
+  background-color: #9dc08a;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.product-carousel .swiper-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/gallery/footer logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  display: none;
+}
+.swiper-button-next, .swiper-button-prev {
+  color: black !important;
+  background: rgb(201, 198, 198);
+}
+.product-carousel .swiper-slide img {
+  padding: 20px;
+  scale: 0;
+  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.swiper-slide-active img {
+  scale: 1 !important;
+}
+.product-details {
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.swiper-slide-active .product-details {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
 }
 @property --tw-translate-x {
   syntax: "*";
