@@ -88,6 +88,54 @@ var swiper = new Swiper(".product-carousel .mySwiper", {
 
 // PRODUCT  SWIPER
 
+var swiper = new Swiper(".hero-circle .mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2000, // 3 seconds delay
+        disableOnInteraction: true, // autoplay won't stop after user interaction
+    },
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-hero-next",
+        prevEl: ".swiper-hero-prev",
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+        },
+        // when window width is >= 768px
+        768: {
+            slidesPerView: 2.5,
+            spaceBetween: 25,
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    }
+});
+
+
+
 // FANCYBOX
 
 Fancybox.bind("[data-fancybox]", {

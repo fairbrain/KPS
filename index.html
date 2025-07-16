@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -55,6 +56,55 @@
         <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
             <img src="./images/loader.png" alt="loader" class="animate__animated animate__flip animate__infinite ">
         </div>
+        <section class="hero-circle relative overflow-hidden md:h-[80vh]  flex justify-center items-end">
+            <video class="absolute top-0" src="./images/996399_Wheat_Closeup_3840x2160.mp4" autoplay muted playsinline
+                loop width="100%" height="100%"></video>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/Snack Bag Mockup_1.png" alt="product-pouch">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/Snack Bag Mockup_2.png" alt="product-pouch">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/Snack Bag Mockup_3.png" alt="product-pouch">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/Snack Bag Mockup_4.png" alt="product-pouch">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/Snack Bag Mockup_5.png" alt="product-pouch">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/Snack Bag Mockup_6.png" alt="product-pouch">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/Snack Bag Mockup_7.png" alt="product-pouch">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/Snack Bag Mockup_8.png" alt="product-pouch">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/Rice Pouch Mockup besmoti.png" alt="product-pouch">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/Rice Pouch Mockup mini k.png" alt="product-pouch">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="hero-nav absolute bottom-2 md:w-1/2 w-full z-10 mx-auto flex justify-between">
+                <button type="button"
+                    class="swiper-hero-prev animate-ping hover:animate-none h-10 aspect-square rounded-full bg-amber-400 text-white font-bold"><i
+                        class="ri-arrow-left-line"></i></button>
+                <button type="button"
+                    class="swiper-hero-prev animate-ping hover:animate-none h-10 aspect-square rounded-full bg-amber-400 text-white font-bold"><i
+                        class="ri-arrow-right-line"></i></button>
+                
+            </div>
+        </section>
         <section class="about font-mont p-10">
             <div class="container mx-auto grid md:grid-cols-4 grid-cols-1 items-center">
                 <div class="left-about flex justify-center items-center relative">
@@ -160,7 +210,8 @@
                             FSSAI-approved processing for guaranteed safety</span></li>
                 </ul>
                 <div class="text-center mt-5 text-white">
-                    <a href="product.html" class="bg-[#ce7520] font-mont px-2 py-1 rounded-xl inline-block hover:scale-105">KNOW
+                    <a href="product.html"
+                        class="bg-[#ce7520] font-mont px-2 py-1 rounded-xl inline-block hover:scale-105">KNOW
                         MORE</a>
                 </div>
             </div>
@@ -344,6 +395,9 @@
             </ul>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/main.js"></script>
 </body>
 

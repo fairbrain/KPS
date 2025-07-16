@@ -10,6 +10,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
@@ -43,6 +44,7 @@
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     --aspect-video: 16 / 9;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -251,6 +253,9 @@
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
+  .bottom-2 {
+    bottom: calc(var(--spacing) * 2);
+  }
   .bottom-5 {
     bottom: calc(var(--spacing) * 5);
   }
@@ -380,6 +385,9 @@
   .h-1 {
     height: calc(var(--spacing) * 1);
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -435,6 +443,9 @@
   }
   .rotate-270 {
     rotate: 270deg;
+  }
+  .animate-ping {
+    animation: var(--animate-ping);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -627,6 +638,9 @@
   }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
+  }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -849,6 +863,13 @@
       }
     }
   }
+  .hover\:animate-none {
+    &:hover {
+      @media (hover: hover) {
+        animation: none;
+      }
+    }
+  }
   .hover\:underline {
     &:hover {
       @media (hover: hover) {
@@ -884,6 +905,11 @@
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
+    }
+  }
+  .md\:h-\[80vh\] {
+    @media (width >= 48rem) {
+      height: 80vh;
     }
   }
   .md\:w-1\/2 {
@@ -1408,6 +1434,132 @@ header nav ul li a:hover, header nav ul li a.active {
   transform: translateY(0) !important;
   opacity: 1 !important;
 }
+.carousel-container {
+  position: relative;
+  width: 90vw;
+  max-width: 600px;
+  aspect-ratio: 1;
+  perspective: 1000px;
+}
+.disk {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ffeda6 45%, #ffc107 100%);
+  box-shadow: inset 0 0 45px rgba(255, 193, 7, 0.9), 0 10px 25px rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+.disk .product {
+  position: absolute;
+  width: 18%;
+  height: 28%;
+  top: 36%;
+  left: 50%;
+  margin-left: -9%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: grayscale(60%) brightness(70%);
+  opacity: 0.6;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.disk .product.active {
+  filter: grayscale(0%) brightness(100%);
+  opacity: 1;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transform: translateZ(50px);
+}
+.disk .product img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  pointer-events: none;
+}
+.nav-buttons {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8%;
+}
+.nav-buttons button {
+  background-color: #ffb800;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgb(255 193 7 / 0.7);
+  transition: background-color 0.3s ease;
+}
+.nav-buttons button:hover {
+  background-color: #e9a500;
+}
+.product-info {
+  width: 90vw;
+  max-width: 600px;
+  background: #fff3d3;
+  border-radius: 0 0 30px 30px;
+  padding: 20px 26px;
+  margin-top: -14px;
+  box-shadow: 0 8px 25px rgb(255 193 7 / 0.45);
+  text-align: center;
+}
+.product-info h2 {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #b35c00;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.product-info p {
+  font-size: 1rem;
+  color: #4a3b00;
+  line-height: 1.3;
+}
+.hero-circle .swiper-slide img {
+  width: 80%;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+@media (max-width: 600px) {
+  .hero-circle .swiper-slide-active img {
+    scale: 2;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.hero-circle .swiper-slide.swiper-slide-prev img {
+  rotate: -45deg;
+  transform: translateY(190px) translateX(-80px);
+  filter: blur(4px);
+  opacity: 1;
+}
+.hero-circle .swiper-slide.swiper-slide-next img {
+  rotate: 45deg;
+  transform: translateY(190px) translateX(80px);
+  filter: blur(4px);
+  opacity: 1;
+}
+.hero-circle .swiper-slide.swiper-slide-active img {
+  transform: translate(0);
+  opacity: 1;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -1533,6 +1685,12 @@ header nav ul li a:hover, header nav ul li a.active {
 @property --tw-ease {
   syntax: "*";
   inherits: false;
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
