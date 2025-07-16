@@ -1,4 +1,9 @@
-
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+        preloader.classList.add("loader-hidden");
+    }, 1000);
+});
 
 
 const slides = document.querySelectorAll(".hero-container .slide");

@@ -7,6 +7,7 @@
     <title>KPS</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
@@ -50,6 +51,10 @@
         <hr class="text-[#ce7520] w-[80%] mx-auto">
     </header>
     <main class="overflow-x-hidden">
+        <!-- Preloader -->
+        <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+            <img src="./images/loader.png" alt="loader" class="animate__animated animate__flip animate__infinite ">
+        </div>
         <section class="about font-mont p-10">
             <div class="container mx-auto grid md:grid-cols-4 grid-cols-1 items-center">
                 <div class="left-about flex justify-center items-center relative">
@@ -73,7 +78,7 @@
                         products while
                         upholding the highest standards of quality and hygiene.</p>
                     <div class="text-start mt-5 text-white">
-                        <a href="#"
+                        <a href="about.html"
                             class="bg-[#ce7520] font-mont px-2 py-1 rounded-xl inline-block hover:scale-105">READ
                             MORE</a>
                     </div>
@@ -104,7 +109,23 @@
 
         </section>
         <section class="logo-tracker mt-10">
-
+            <marquee behavior="" direction="">
+                <div class="flex">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                    <img src="./images/haf.png" alt="logo" width="250" class="shrink-0">
+                </div>
+            </marquee>
         </section>
         <section class="benifits font-mont p-10">
             <div class="container mx-auto text-center md:px-10">
@@ -139,7 +160,7 @@
                             FSSAI-approved processing for guaranteed safety</span></li>
                 </ul>
                 <div class="text-center mt-5 text-white">
-                    <a href="#" class="bg-[#ce7520] font-mont px-2 py-1 rounded-xl inline-block hover:scale-105">KNOW
+                    <a href="product.html" class="bg-[#ce7520] font-mont px-2 py-1 rounded-xl inline-block hover:scale-105">KNOW
                         MORE</a>
                 </div>
             </div>
@@ -189,7 +210,7 @@
                         Explore our range and taste the difference of purity!
                     </p>
                     <div class="text-end mt-5 text-white">
-                        <a href="#"
+                        <a href="product.html"
                             class="bg-[#ce7520] font-mont px-2 py-1 rounded-xl inline-block hover:scale-105">KNOW
                             MORE</a>
                     </div>
@@ -200,7 +221,7 @@
             <div class="container mx-auto">
                 <img src="./images/banner logo brn.png" alt="logo" class="md:w-1/2 w-full">
                 <p class="md:text-4xl font-libre text-[#a2550d] text-xl">Behind Great Health</p>
-                <a href="#"
+                <a href="product.html"
                     class="text-[#ce7520] font-semibold mt-5 bg-white px-3 py-2 hover:scale-105 rounded-2xl inline-block">VIEW
                     PRODUCTS |
                     +</a>
