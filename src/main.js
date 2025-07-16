@@ -67,7 +67,7 @@ var swiper = new Swiper(".product-carousel .mySwiper", {
     effect: "fade",
     autoplay: {
         delay: 3000, // 3 seconds delay
-        disableOnInteraction: false, // autoplay won't stop after user interaction
+        disableOnInteraction: true, // autoplay won't stop after user interaction
     },
     dots: false,
     loop: true,
