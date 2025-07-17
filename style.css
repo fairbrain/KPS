@@ -232,6 +232,9 @@
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
+  .top-\[30\%\] {
+    top: 30%;
+  }
   .-right-10 {
     right: calc(var(--spacing) * -10);
   }
@@ -443,6 +446,9 @@
   }
   .rotate-270 {
     rotate: 270deg;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .animate-ping {
     animation: var(--animate-ping);
@@ -705,6 +711,9 @@
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
   }
@@ -852,6 +861,11 @@
   .outline-0 {
     outline-style: var(--tw-outline-style);
     outline-width: 0px;
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .hover\:scale-105 {
     &:hover {
@@ -1532,33 +1546,47 @@ header nav ul li a:hover, header nav ul li a.active {
   line-height: 1.3;
 }
 .hero-circle .swiper-slide img {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   transition: all 0.3s ease-in-out;
-  opacity: 0;
+  position: relative;
+  top: 500px;
 }
 @media (max-width: 600px) {
   .hero-circle .swiper-slide-active img {
-    scale: 2;
+    scale: 0.8 !important;
     margin: 0 auto;
     transition: all 0.3s ease-in-out;
+  }
+  .hero-circle .swiper-slide img {
+    width: 50%;
   }
 }
 .hero-circle .swiper-slide.swiper-slide-prev img {
   rotate: -45deg;
-  transform: translateY(190px) translateX(-80px);
+  transform: translateY(240px) translateX(-30px);
   filter: blur(4px);
-  opacity: 1;
+  top: 0 !important;
+}
+.disk-image {
+  transform-origin: center center;
 }
 .hero-circle .swiper-slide.swiper-slide-next img {
   rotate: 45deg;
-  transform: translateY(190px) translateX(80px);
+  transform: translateY(240px) translateX(30px);
   filter: blur(4px);
-  opacity: 1;
+  top: 0 !important;
+}
+.disk-image {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.452);
 }
 .hero-circle .swiper-slide.swiper-slide-active img {
   transform: translate(0);
-  opacity: 1;
+  top: 0 !important;
+  scale: 1.1 !important;
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -1574,6 +1602,26 @@ header nav ul li a:hover, header nav ul li a.active {
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-space-y-reverse {
   syntax: "*";
@@ -1698,6 +1746,11 @@ header nav ul li a:hover, header nav ul li a.active {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;

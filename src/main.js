@@ -105,6 +105,16 @@ var swiper = new Swiper(".hero-circle .mySwiper", {
         nextEl: ".swiper-hero-next",
         prevEl: ".swiper-hero-prev",
     },
+    on: {
+        slideNextTransitionStart: function () {
+            currentRotation += 90;
+            rotateDisk();
+        },
+        slidePrevTransitionStart: function () {
+            currentRotation -= 90;
+            rotateDisk();
+        }
+    },
     breakpoints: {
         // when window width is >= 320px
         320: {
@@ -134,7 +144,26 @@ var swiper = new Swiper(".hero-circle .mySwiper", {
     }
 });
 
+let currentRotation = 0;
 
+const disk = document.getElementById('rotating-disk');
+const prevButton = document.querySelector('.swiper-hero-prev');
+const nextButton = document.querySelector('.swiper-hero-next');
+
+prevButton?.addEventListener('click', () => {
+    currentRotation += 90;
+    rotateDisk();
+});
+
+nextButton?.addEventListener('click', () => {
+    currentRotation -= 90;
+    rotateDisk();
+});
+
+function rotateDisk() {
+    disk.style.transform = `rotate(${currentRotation}deg)`;
+    disk.style.transition = 'transform 0.5s ease';
+}
 
 // FANCYBOX
 

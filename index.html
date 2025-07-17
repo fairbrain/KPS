@@ -51,14 +51,18 @@
         </div>
         <hr class="text-[#ce7520] w-[80%] mx-auto">
     </header>
+
     <main class="overflow-x-hidden">
         <!-- Preloader -->
         <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
             <img src="./images/loader.png" alt="loader" class="animate__animated animate__flip animate__infinite ">
         </div>
-        <section class="hero-circle relative overflow-hidden md:h-[80vh]  flex justify-center items-end">
-            <video class="absolute top-0" src="./images/996399_Wheat_Closeup_3840x2160.mp4" autoplay muted playsinline
+        <section class="hero-circle relative overflow-hidden md:h-[80vh]  flex justify-center items-end pt-10">
+            <video class="absolute top-0 w-full h-full object-cover" src="./images/996399_Wheat_Closeup_3840x2160.mp4" autoplay muted playsinline
                 loop width="100%" height="100%"></video>
+            <div class="disk-image absolute p-2 top-[30%] rounded-full" id="rotating-disk" >
+                <img src="./images/new elements.png" alt="disk" >
+            </div>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -97,12 +101,12 @@
             </div>
             <div class="hero-nav absolute bottom-2 md:w-1/2 w-full z-10 mx-auto flex justify-between">
                 <button type="button"
-                    class="swiper-hero-prev animate-ping hover:animate-none h-10 aspect-square rounded-full bg-amber-400 text-white font-bold"><i
+                    class="swiper-hero-next animate-ping hover:animate-none h-10 aspect-square rounded-full bg-amber-400 text-white font-bold"><i
                         class="ri-arrow-left-line"></i></button>
                 <button type="button"
                     class="swiper-hero-prev animate-ping hover:animate-none h-10 aspect-square rounded-full bg-amber-400 text-white font-bold"><i
                         class="ri-arrow-right-line"></i></button>
-                
+
             </div>
         </section>
         <section class="about font-mont p-10">
