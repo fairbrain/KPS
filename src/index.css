@@ -188,7 +188,7 @@ header nav ul li a.active {
 }
 
 .about {
-    background: url("../images/midd\ text\ banner2.png") no-repeat right/contain;
+    background: url("./images/midd\ text\ banner2.png") no-repeat right/contain;
 }
 
 .hero-container .slide {
@@ -229,11 +229,11 @@ header nav ul li a.active {
 
 
 .benifits {
-    background: url('../images/midd\ text\ banner.png') no-repeat bottom/cover;
+    background: url('./images/midd\ text\ banner.png') no-repeat bottom/cover;
 }
 
 .products {
-    background: url("../images/midd\ text\ banner\ 2.png") no-repeat center/cover;
+    background: url("./images/midd\ text\ banner\ 2.png") no-repeat center/cover;
 }
 
 .receipie-card img:hover {
@@ -254,7 +254,7 @@ header nav ul li a.active {
 }
 
 .what_our_client_says {
-    background: url("../images/midd\ text\ banner\ 4.png") no-repeat bottom/contain;
+    background: url("./images/midd\ text\ banner\ 4.png") no-repeat bottom/contain;
 }
 
 .testimonials_card::after {
@@ -307,7 +307,7 @@ header nav ul li a.active {
 /* GALLERY SECTION */
 
 .gallery-wrapper {
-    background: linear-gradient(rgba(104, 103, 103, 0.654), rgba(0, 0, 0, 0.608)), url("../images/gallery/card15.jpg") no-repeat center/cover;
+    background: linear-gradient(rgba(104, 103, 103, 0.654), rgba(0, 0, 0, 0.608)), url("./images/gallery/card15.jpg") no-repeat center/cover;
     height: 100vh;
     width: 100%;
     border-radius: 25px;
@@ -411,7 +411,7 @@ header nav ul li a.active {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("../images/gallery/footer logo.png");
+    background-image: url("./images/gallery/footer logo.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
