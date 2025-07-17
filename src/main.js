@@ -88,13 +88,21 @@ var swiper = new Swiper(".product-carousel .mySwiper", {
 
 // PRODUCT  SWIPER
 
-var swiper = new Swiper(".hero-circle .mySwiper", {
+let currentRotation = 0;
+const disk = document.getElementById('rotating-disk');
+
+function rotateDisk() {
+    disk.style.transform = `rotate(${currentRotation}deg)`;
+    disk.style.transition = 'transform 0.5s ease';
+}
+
+swiper = new Swiper(".hero-circle .mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-        delay: 2000, // 3 seconds delay
-        disableOnInteraction: true, // autoplay won't stop after user interaction
+        delay: 2000,
+        disableOnInteraction: true,
     },
     loop: true,
     pagination: {
@@ -116,27 +124,22 @@ var swiper = new Swiper(".hero-circle .mySwiper", {
         }
     },
     breakpoints: {
-        // when window width is >= 320px
         320: {
             slidesPerView: 1,
             spaceBetween: 10,
         },
-        // when window width is >= 480px
         480: {
             slidesPerView: 1,
             spaceBetween: 20,
         },
-        // when window width is >= 640px
         640: {
             slidesPerView: 2,
             spaceBetween: 25,
         },
-        // when window width is >= 768px
         768: {
             slidesPerView: 2.5,
             spaceBetween: 25,
         },
-        // when window width is >= 1024px
         1024: {
             slidesPerView: 3,
             spaceBetween: 30,
@@ -144,26 +147,6 @@ var swiper = new Swiper(".hero-circle .mySwiper", {
     }
 });
 
-let currentRotation = 0;
-
-const disk = document.getElementById('rotating-disk');
-const prevButton = document.querySelector('.swiper-hero-prev');
-const nextButton = document.querySelector('.swiper-hero-next');
-
-prevButton?.addEventListener('click', () => {
-    currentRotation += 90;
-    rotateDisk();
-});
-
-nextButton?.addEventListener('click', () => {
-    currentRotation -= 90;
-    rotateDisk();
-});
-
-function rotateDisk() {
-    disk.style.transform = `rotate(${currentRotation}deg)`;
-    disk.style.transition = 'transform 0.5s ease';
-}
 
 // FANCYBOX
 
