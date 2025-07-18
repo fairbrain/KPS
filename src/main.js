@@ -1,3 +1,13 @@
+// const videoUrls = [
+//     './images/videos/atta.mp4',
+//     './images/videos/daliya.mp4',
+//     './images/videos/maida.mp4',
+//     './images/videos/rice 2.mp4',
+//     './images/videos/rice.mp4',
+//     './images/videos/suji.mp4',
+// ];
+
+
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
     setTimeout(() => {
@@ -121,6 +131,15 @@ swiper = new Swiper(".hero-circle .mySwiper", {
         slidePrevTransitionStart: function () {
             currentRotation -= 90;
             rotateDisk();
+        },
+        slideChange: function () {
+            const currentIndex = swiper.realIndex; // use realIndex to ignore duplicated slides in loop mode
+            const video = document.getElementById('hero-video');
+            if (videoUrls[currentIndex]) {
+                video.src = videoUrls[currentIndex];
+                video.load(); // reload the video
+                video.play(); // ensure it starts playing
+            }
         }
     },
     breakpoints: {
