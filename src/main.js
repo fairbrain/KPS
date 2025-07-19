@@ -1,3 +1,17 @@
+const heroVideoSources = [
+    "./images/video/atta.gif",
+    "./images/video/daliya.gif",
+    "./images/video/maida.gif",
+    "./images/video/rice.gif",
+    "./images/video/rice 2.gif",
+    "./images/video/suji.gif",
+    "./images/video/atta.gif",
+    "./images/video/daliya.gif",
+    "./images/video/maida.gif",
+    "./images/video/rice.gif",
+    "./images/video/suji.gif",
+];
+
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
     setTimeout(() => {
@@ -96,6 +110,13 @@ function rotateDisk() {
     disk.style.transition = 'transform 0.5s ease';
 }
 
+function updateHeroVideo(index) {
+    const heroVideo = document.getElementById("hero-video");
+    if (heroVideoSources[index]) {
+        heroVideo.src = heroVideoSources[index];
+    }
+}
+
 swiper = new Swiper(".hero-circle .mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -117,10 +138,16 @@ swiper = new Swiper(".hero-circle .mySwiper", {
         slideNextTransitionStart: function () {
             currentRotation += 90;
             rotateDisk();
+            updateHeroVideo(this.realIndex);
         },
         slidePrevTransitionStart: function () {
             currentRotation -= 90;
             rotateDisk();
+            updateHeroVideo(this.realIndex);
+        },
+        slideChangeTransitionStart: function () {
+            // Handles changes from swiping or autoplay
+            updateHeroVideo(this.realIndex);
         }
     },
     breakpoints: {
