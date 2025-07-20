@@ -1,16 +1,28 @@
 const heroVideoSources = [
-    "./images/video/atta.gif",
-    "./images/video/daliya.gif",
     "./images/video/maida.gif",
+    "./images/video/atta.gif",
+    "./images/video/suji.gif",
+    "./images/video/suji.gif",
+    "./images/video/suji.gif",
+    "./images/video/suji.gif",
+    "./images/video/maida.gif",
+    "./images/video/atta.gif",
     "./images/video/rice.gif",
     "./images/video/rice 2.gif",
-    "./images/video/suji.gif",
-    "./images/video/atta.gif",
-    "./images/video/daliya.gif",
-    "./images/video/maida.gif",
-    "./images/video/rice.gif",
-    "./images/video/suji.gif",
 ];
+
+const h3Array = [
+    "<h3>MAIDA <br><span>1Kg</span></h3>",
+    "<h3>WHOLE WHEAT <br> CHAKKI ATTA<br><span>1Kg</span></h3>",
+    "<h3>Premium Sooji <br><span>200g</span></h3>",
+    "<h3>Sooji <br> <span>150g</span></h3>",
+    "<h3>Premium Sooji <br><span>500g</span></h3>",
+    "<h3>Sooji <br><span>500g</span></h3>",
+    "<h3>MAIDA <br><span>500g</span></h3>",
+    "<h3>WHOLE WHEAT CHAKKI ATTA <br><span>5Kg</span></h3>",
+    "<h3>BASMATI RICE <br><span>5Kg</span></h3>",
+    "<h3>MINIKET RICE <br><span>5Kg</span></h3>",
+]
 
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
@@ -104,6 +116,7 @@ var swiper = new Swiper(".product-carousel .mySwiper", {
 
 let currentRotation = 0;
 const disk = document.getElementById('rotating-disk');
+const productDetail = document.querySelector('.product-detail');
 
 function rotateDisk() {
     disk.style.transform = `rotate(${currentRotation}deg)`;
@@ -114,6 +127,14 @@ function updateHeroVideo(index) {
     const heroVideo = document.getElementById("hero-video");
     if (heroVideoSources[index]) {
         heroVideo.src = heroVideoSources[index];
+    }
+}
+
+function updateProductDetail(index) {
+    if (h3Array[index]) {
+        productDetail.innerHTML = h3Array[index];
+    } else {
+        productDetail.innerHTML = ""; // fallback
     }
 }
 
@@ -139,15 +160,18 @@ swiper = new Swiper(".hero-circle .mySwiper", {
             currentRotation += 90;
             rotateDisk();
             updateHeroVideo(this.realIndex);
+            updateProductDetail(this.realIndex);
         },
         slidePrevTransitionStart: function () {
             currentRotation -= 90;
             rotateDisk();
             updateHeroVideo(this.realIndex);
+            updateProductDetail(this.realIndex);
         },
         slideChangeTransitionStart: function () {
             // Handles changes from swiping or autoplay
             updateHeroVideo(this.realIndex);
+            updateProductDetail(this.realIndex);
         }
     },
     breakpoints: {

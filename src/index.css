@@ -593,7 +593,7 @@ header nav ul li a.active {
         transition: all 0.3s ease-in-out;
     }
 
-    .hero-circle .swiper-slide img{
+    .hero-circle .swiper-slide img {
         width: 50%;
     }
 }
@@ -603,6 +603,8 @@ header nav ul li a.active {
     transform: translateY(240px) translateX(-30px);
     filter: blur(4px);
     top: 0 !important;
+    position: relative;
+    z-index: -99;
 }
 
 .disk-image {
@@ -624,7 +626,27 @@ header nav ul li a.active {
 }
 
 .hero-circle .swiper-slide.swiper-slide-active img {
-    transform: translate(0);
+    transform: translateY(-50px);
     top: 0 !important;
     scale: 1.1 !important;
+}
+
+.hero-circle .swiper-slide {
+    position: relative;
+    padding-top: 50px;
+}
+
+.product-detail h3 {
+    color: #511800;
+    font-size: clamp(12px, 3vw, 25px);
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.product-detail h3 span{
+    font-size: clamp(10px, 1vw, 16px);
+    text-transform: capitalize;
+    font-weight: 400 !important;
 }
