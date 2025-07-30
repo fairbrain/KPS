@@ -81,18 +81,68 @@ navClose?.addEventListener("click", () => {
 
 // GALLERY SWIPER
 var swiper = new Swiper(".gallery-slider .mySwiper", {
-    effect: "cards",
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
     grabCursor: true,
     loop: true,
     autoplay: {
-        delay: 3000, // 3 seconds delay
-        disableOnInteraction: false, // autoplay won't stop after user interaction
+        delay: 3000,
+        disableOnInteraction: false,
     },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            centeredSlides: true,
+        },
+        // when window width is >= 768px
+        768: {
+            slidesPerView: 2,
+            centeredSlides: true,
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 3,
+            centeredSlides: true,
+        }
+    }
 });
 // GALLERY SWIPER
 
-// PRODUCT  SWIPER
+// UPCOMING SLIDER SWIPER
+var swiper = new Swiper(".upcm-product-slider .mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    grabCursor: true,
+    loop: true,
+    speed: 1000,
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            centeredSlides: true,
+        },
+        // when window width is >= 768px
+        768: {
+            slidesPerView: 2,
+            centeredSlides: true,
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 3,
+            centeredSlides: true,
+        }
+    }
+});
+// UPCOMING SLIDER SWIPER
 
+// PRODUCT  SWIPER
 var swiper = new Swiper(".product-carousel .mySwiper", {
     spaceBetween: 30,
     effect: "fade",
