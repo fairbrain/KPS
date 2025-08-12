@@ -3,25 +3,18 @@ const heroVideoSources = [
     "./images/video/atta.gif",
     "./images/video/suji.gif",
     "./images/video/suji.gif",
-    "./images/video/suji.gif",
-    "./images/video/suji.gif",
     "./images/video/maida.gif",
     "./images/video/atta.gif",
-    "./images/video/rice.gif",
-    "./images/video/rice 2.gif",
 ];
 
 const h3Array = [
-    "<h3>MAIDA <br><span>1Kg</span></h3>",
-    "<h3>WHOLE WHEAT <br> CHAKKI ATTA<br><span>1Kg</span></h3>",
-    "<h3>Premium Sooji <br><span>200g</span></h3>",
-    "<h3>Sooji <br> <span>150g</span></h3>",
-    "<h3>Premium Sooji <br><span>500g</span></h3>",
-    "<h3>Sooji <br><span>500g</span></h3>",
-    "<h3>MAIDA <br><span>500g</span></h3>",
-    "<h3>WHOLE WHEAT CHAKKI ATTA <br><span>5Kg</span></h3>",
-    "<h3>BASMATI RICE <br><span>5Kg</span></h3>",
-    "<h3>MINIKET RICE <br><span>5Kg</span></h3>",
+    "<h3>MAIDA</h3>",
+    "<h3>WHOLE WHEAT CHAKKI ATTA</h3>",
+    "<h3>Premium Sooji</h3>",
+    "<h3>Sooji</h3>",
+    "<h3>MAIDA</h3>",
+    "<h3>WHOLE WHEAT CHAKKI ATTA</h3>",
+
 ]
 
 window.addEventListener("load", () => {
@@ -119,7 +112,7 @@ var swiper = new Swiper(".upcm-product-slider .mySwiper", {
     loop: true,
     speed: 1000,
     autoplay: {
-        delay: 1000,
+        delay: 500,
         disableOnInteraction: false,
     },
     breakpoints: {

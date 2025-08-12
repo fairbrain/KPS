@@ -643,6 +643,15 @@ header nav ul li a.active {
     font-weight: bolder;
     text-transform: uppercase;
     line-height: 1;
+    padding-bottom: 20px;
+}
+
+.upcoming-prod-head{
+    color: rgba(1, 1, 255, 0.301);
+}
+
+.upcoming-prod-head span{
+    color: #ce7520 !important;
 }
 
 .product-detail h3 span{
