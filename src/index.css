@@ -229,7 +229,7 @@ header nav ul li a.active {
 
 
 .benifits {
-    background: url('./images/midd\ text\ banner.png') no-repeat bottom/cover;
+    background: url('./images/midd\ text\ banner.png') no-repeat top/cover;
 }
 
 .products {
@@ -646,16 +646,20 @@ header nav ul li a.active {
     padding-bottom: 20px;
 }
 
-.upcoming-prod-head{
+.upcoming-prod-head {
     color: rgba(1, 1, 255, 0.301);
 }
 
-.upcoming-prod-head span{
+.upcoming-prod-head span {
     color: #ce7520 !important;
 }
 
-.product-detail h3 span{
+.product-detail h3 span {
     font-size: clamp(10px, 1vw, 16px);
     text-transform: capitalize;
     font-weight: 400 !important;
+}
+
+.about-video {
+    background: linear-gradient(#e88635d0, #ffffff52), url(../images/thumbnail-about.PNG);
 }

@@ -14,7 +14,6 @@ const h3Array = [
     "<h3>Sooji</h3>",
     "<h3>MAIDA</h3>",
     "<h3>WHOLE WHEAT CHAKKI ATTA</h3>",
-
 ]
 
 window.addEventListener("load", () => {
