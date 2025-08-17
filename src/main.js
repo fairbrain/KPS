@@ -1,7 +1,7 @@
 const heroVideoSources = [
     "./images/video/maida.gif",
-    "./images/video/atta.gif",
     "./images/video/suji.gif",
+    "./images/video/atta.gif",
     "./images/video/suji.gif",
     "./images/video/maida.gif",
     "./images/video/atta.gif",
@@ -9,12 +9,12 @@ const heroVideoSources = [
 
 const h3Array = [
     "<h3>MAIDA</h3>",
-    "<h3>WHOLE WHEAT CHAKKI ATTA</h3>",
     "<h3>Premium Sooji</h3>",
+    "<h3>WHOLE WHEAT CHAKKI ATTA</h3>",
     "<h3>Sooji</h3>",
     "<h3>MAIDA</h3>",
     "<h3>WHOLE WHEAT CHAKKI ATTA</h3>",
-]
+];
 
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
