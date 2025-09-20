@@ -16,12 +16,12 @@ const h3Array = [
     "<h3>WHOLE WHEAT CHAKKI ATTA</h3>",
 ];
 
-window.addEventListener("load", () => {
-    const preloader = document.getElementById("preloader");
-    setTimeout(() => {
-        preloader.classList.add("loader-hidden");
-    }, 1000);
-});
+// window.addEventListener("load", () => {
+//     const preloader = document.getElementById("preloader");
+//     setTimeout(() => {
+//         preloader.classList.add("loader-hidden");
+//     }, 1000);
+// });
 
 
 const slides = document.querySelectorAll(".hero-container .slide");
